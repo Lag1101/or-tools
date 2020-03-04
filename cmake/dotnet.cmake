@@ -49,7 +49,7 @@ foreach(PROTO_FILE IN LISTS proto_dotnet_files)
     "--csharp_opt=file_extension=.pb.cs"
     ${PROTO_FILE}
     DEPENDS ${PROTO_FILE} protobuf::protoc
-    COMMENT "Running C++ protocol buffer compiler on ${PROTO_FILE}"
+    COMMENT "Generate C# protocol buffer for ${PROTO_FILE}"
     VERBATIM)
   list(APPEND PROTO_DOTNETS ${PROTO_DOTNET})
 endforeach()
