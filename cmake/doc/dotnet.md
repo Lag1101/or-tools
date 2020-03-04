@@ -31,29 +31,132 @@ generate them and have the following layout:
 
 ```shell
 <CMAKE_BINARY_DIR>/dotnet
-build/dotnet
-├── Google
-│   ├── Bar
-│   │   ├── Bar.cs
-│   │   ├── csBar.cs
-│   │   ├── csBarPINVOKE.cs
-│   │   └── SWIGTYPE_p_int64_t.cs
-│   ├── Foo
-│   │   ├── csFoo.cs
-│   │   ├── csFooPINVOKE.cs
-│   │   ├── Foo.cs
-│   │   └── SWIGTYPE_p_int64_t.cs
-│   └── FooBar
-│       ├── csFooBar.cs
-│       ├── csFooBarPINVOKE.cs
-│       ├── FooBar.cs
-│       └── SWIGTYPE_p_int64_t.cs
-├── Directory.Build.props
-├── logo.png
-├── Mizux.CMakeSwig
-│   └── Mizux.CMakeSwig.csproj
-└── Mizux.CMakeSwig.runtime.linux-x64
-    └── Mizux.CMakeSwig.runtime.linux-x64.csproj
+── Directory.Build.props
+├── orLogo.png
+├── ortools
+│   ├── algorithms
+│   │   ├── Int64Vector.cs
+│   │   ├── Int64VectorVector.cs
+│   │   ├── IntVector.cs
+│   │   ├── IntVectorVector.cs
+│   │   ├── KnapsackSolver.cs
+│   │   ├── knapsack_solverCSHARP_wrap.cxx
+│   │   ├── operations_research_algorithms.cs
+│   │   └── operations_research_algorithmsPINVOKE.cs
+│   ├── constraint_solver
+│   │   ├── Assignment.cs
+│   │   ├── AssignmentElement.cs
+│   │   ├── AssignmentIntContainer.cs
+│   │   ├── AssignmentIntervalContainer.cs
+│   │   ├── Assignment.pb.cs
+│   │   ├── AssignmentSequenceContainer.cs
+│   │   ├── BaseIntExpr.cs
+│   │   ├── BaseLns.cs
+│   │   ├── BaseObject.cs
+│   │   ├── BasePathFilter.cs
+│   │   ├── BooleanVar.cs
+│   │   ├── CastConstraint.cs
+│   │   ├── ChangeValue.cs
+│   │   ├── Constraint.cs
+│   │   ├── CPFeasibilityFilter.cs
+│   │   ├── DecisionBuilder.cs
+│   │   ├── DecisionBuilderVector.cs
+│   │   ├── Decision.cs
+│   │   ├── DecisionVisitor.cs
+│   │   ├── DefaultPhaseParameters.cs
+│   │   ├── Demon.cs
+│   │   ├── DisjunctiveConstraint.cs
+│   │   ├── GlobalVehicleBreaksConstraint.cs
+│   │   ├── Int64Vector.cs
+│   │   ├── Int64VectorVector.cs
+│   │   ├── IntervalVar.cs
+│   │   ├── IntervalVarElement.cs
+│   │   ├── IntervalVarVector.cs
+│   │   ├── IntExpr.cs
+│   │   ├── IntTupleSet.cs
+│   │   ├── IntVar.cs
+│   │   ├── IntVarElement.cs
+│   │   ├── IntVarIterator.cs
+│   │   ├── IntVarLocalSearchFilter.cs
+│   │   ├── IntVarLocalSearchOperator.cs
+│   │   ├── IntVarLocalSearchOperatorTemplate.cs
+│   │   ├── IntVarVector.cs
+│   │   ├── IntVector.cs
+│   │   ├── IntVectorVector.cs
+│   │   ├── LocalSearchFilter.cs
+│   │   ├── LocalSearchFilterVector.cs
+│   │   ├── LocalSearchMonitor.cs
+│   │   ├── LocalSearchOperator.cs
+│   │   ├── LocalSearchOperatorVector.cs
+│   │   ├── LocalSearchPhaseParameters.cs
+│   │   ├── ModelCache.cs
+│   │   ├── ModelVisitor.cs
+│   │   ├── operations_research_constraint_solver.cs
+│   │   ├── operations_research_constraint_solverPINVOKE.cs
+│   │   ├── OptimizeVar.cs
+│   │   ├── Pack.cs
+│   │   ├── PathOperator.cs
+│   │   ├── PropagationBaseObject.cs
+│   │   ├── PropagationMonitor.cs
+│   │   ├── RegularLimit.cs
+│   │   ├── RevBool.cs
+│   │   ├── RevInteger.cs
+│   │   ├── RevPartialSequence.cs
+│   │   ├── routingCSHARP_wrap.cxx
+│   │   ├── routingCSHARP_wrap.h
+│   │   ├── RoutingDimension.cs
+│   │   ├── RoutingEnums.pb.cs
+│   │   ├── RoutingIndexManager.cs
+│   │   ├── RoutingModel.cs
+│   │   ├── RoutingModelVisitor.cs
+│   │   ├── RoutingParameters.pb.cs
+│   │   ├── SearchLimit.cs
+│   │   ├── SearchLimit.pb.cs
+│   │   ├── SearchLog.cs
+│   │   ├── SearchMonitor.cs
+│   │   ├── SearchMonitorVector.cs
+│   │   ├── SequenceVar.cs
+│   │   ├── SequenceVarElement.cs
+│   │   ├── SequenceVarLocalSearchOperator.cs
+│   │   ├── SequenceVarLocalSearchOperatorTemplate.cs
+│   │   ├── SequenceVarVector.cs
+│   │   ├── SolutionCollector.cs
+│   │   ├── SolutionPool.cs
+│   │   ├── Solver.cs
+│   │   ├── SolverParameters.pb.cs
+│   │   ├── SymmetryBreaker.cs
+│   │   ├── SymmetryBreakerVector.cs
+│   │   ├── TypeIncompatibilityChecker.cs
+│   │   ├── TypeRegulationsChecker.cs
+│   │   ├── TypeRegulationsConstraint.cs
+│   │   └── TypeRequirementChecker.cs
+│   ├── graph
+│   │   ├── graphCSHARP_wrap.cxx
+│   │   ├── LinearSumAssignment.cs
+│   │   ├── MaxFlow.cs
+│   │   ├── MinCostFlowBase.cs
+│   │   ├── MinCostFlow.cs
+│   │   ├── operations_research_graph.cs
+│   │   └── operations_research_graphPINVOKE.cs
+│   ├── linear_solver
+│   │   └── LinearSolver.pb.cs
+│   ├── sat
+│   │   ├── BooleanProblem.pb.cs
+│   │   ├── CpModel.pb.cs
+│   │   ├── operations_research_sat.cs
+│   │   ├── operations_research_satPINVOKE.cs
+│   │   ├── satCSHARP_wrap.cxx
+│   │   ├── satCSHARP_wrap.h
+│   │   ├── SatHelper.cs
+│   │   ├── SatParameters.pb.cs
+│   │   └── SolutionCallback.cs
+│   └── util
+│       ├── *.cs
+│       ├── operations_research_utilPINVOKE.cs
+│       ├── sorted_interval_listCSHARP_wrap.cxx
+│       └── sorted_interval_listCSHARP_wrap.h
+├── replace.cmake
+└── replace_runtime.cmake
 ```
 src: `tree build/dotnet --prune -I "obj|bin"`
 
